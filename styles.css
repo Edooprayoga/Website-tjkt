@@ -133,20 +133,32 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 10px;
+    margin-left: 200px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
   }
   
   header .logo {
     display: flex;
     align-items: center;
+    
   }
   
+  header .logo img {
+    border-radius: 25px;
+    margin-top: 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  }
   header .logo h1 {
     margin-left: 10px;
+    margin-top: 50px;
   }
   
   header nav ul {
     list-style-type: none;
     display: flex;
+    margin-top: 50px;
   }
   
   header nav ul li {
@@ -166,44 +178,73 @@ body {
   }
   
   /* Sidebar */
-  .sidebar {
-    width: 200px;
-    background-color: #2C3E50;
-    padding: 20px;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-  }
-  
-  .sidebar ul {
-    list-style-type: none;
-  }
-  
-  .sidebar ul li {
-    margin-bottom: 10px;
-  }
-  
-  .sidebar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  .sidebar ul li a:hover {
-    background-color: #34495E;
-    padding-left: 10px;
-  }
+ .open-btn {
+  font-size: 18px;          
+  width: 40px;               
+  height: 40px;              
+  background: gray;          
+  border: none;              
+  color: white;              
+  cursor: pointer;           
+  position: fixed;           
+  top: 10px;                
+  left: 10px;   
+  border-radius: 5px;     
+  z-index: 1001;             
+  display: flex;             
+  align-items: center;       
+  justify-content: center;
+}
+
+ .sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(51, 51, 51, 0.95);
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+  z-index: 1000;
+}
+
+.sidebar a {
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+  transition: 0.2s;
+}
+
+.sidebar .logout-btn {
+  margin-top: auto;       
+  background: blue;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.sidebar a:hover {
+  background-color: #575757;
+}
+
   
   /* Main Content */
   .content {
+    
     margin-left: 220px;
     padding: 20px;
     flex-grow: 1;
   }
   
   .dashboard-overview {
-    margin-bottom: 40px;
+    position: relative;
+    right: 5px;
+    margin-bottom: 20px;
+    
   }
   
   .stats {
@@ -218,15 +259,20 @@ body {
     text-align: center;
     flex: 1;
   }
-  
+
+    
+
   .stat-box h3 {
     margin-bottom: 10px;
+    position: relative;
+    left: 0;
   }
   
   .academic-info, .Jadwal {
     margin-bottom: 40px;
-    color: rgb(255, 0, 0);
+    color: rgb(182, 22, 11);
     font-size: 20px;
+    
   
   }
 
@@ -239,6 +285,7 @@ body {
     color: white;
     padding: 20px;
     text-align: center;
+    border-radius: 25px;
   }
   
   /* Responsif untuk tampilan mobile */
