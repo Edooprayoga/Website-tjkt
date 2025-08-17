@@ -22,23 +22,20 @@
         <li><a href="#">Kontak</a></li>
       </ul>
     </nav>
-    <div class="profile">
-      <span>Selamat datang, Admin</span>
-      <a href="#">Logout</a>
-    </div>
   </header>
 
   <!-- Sidebar -->
   <aside class="sidebar">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Manajemen Siswa</a></li>
-      <li><a href="#">Manajemen Guru</a></li>
-      <li><a href="#">Nilai & Akademik</a></li>
-      <li><a href="#">Jadwal Pelajaran</a></li>
-      <li><a href="#">Pengumuman</a></li>
-      <li><a href="#">Forum</a></li>
-    </ul>
+      <button class="open-btn" onclick="openSidebar()">&#9776;</button>
+        <div id="mySidebar" class="sidebar">
+          <a href="javascript:void(0)" onclick="closeSidebar()">Tutup ×</a>
+          <a href="dashboard.html">Home</a>
+          <a href="#">Data Siswa</a>
+          <a href="#">Jadwal</a>
+          <a href="#">Pengumuman</a>
+          <a href="#">Kontak</a>
+          <a href="logout.php" class="logout-btn">Logout</a>
+       </div>
   </aside>
 
   <!-- Main Content -->
@@ -56,7 +53,7 @@
         </div>
         <div class="stat-box">
           <h3>EXTRAKULIKULER</h3>
-          <p>ATLETIK, Bola Voly, Bela Diri, Multimedia, Jaringan, Pramuka, Drum Band, PMR</p>
+          <p>ATLETIK, Bola Voly, Drumb Band, Multimedia, Jaringan, Pramuka, Music, PMR</p>
         </div>
       </div>
     </section>
@@ -72,15 +69,24 @@
     <section class="Jadwal">
       <h2>JURUSAN</h2>
       <ul>
-        <li>TKJ (Teknik Komunuikasi Jaringan)</li>
-        <li>BDP (Bisnis Daring Pemasaran) </li>
+          <li>TKJ (Teknik Komunuikasi Jaringan)</li>
+          <li>BDP (Bisnis Daring Pemasaran) </li>
       </ul>
     </section>
   </main>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2024 Sekolah SMK MA'ARIF NGORO | <a href="#">Kontak Sekolah</a></p>
+    <p>&copy; 2025 Sekolah SMK MA'ARIF NGORO | <a href="#">Kontak Sekolah</a></p>
   </footer>
+<script>
+   function openSidebar() {
+    document.getElementById("mySidebar").style.width = "250px";
+   }
+   function closeSidebar() {
+    document.getElementById("mySidebar").style.width = "0";
+   }
+</script>
+
 </body>
 </html>
